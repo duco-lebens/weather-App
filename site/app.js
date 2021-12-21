@@ -3,8 +3,8 @@ const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const apiKey = '17ed4cb1efb23737783a76e84a98c0dd&units=imperial'; // return in Fahrenheit
 
 // Create a new date instance dynamically with JS
-let d = new Date();
-let newDate = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
+let today = new Date();
+let newDate = String(today.getMonth()+ 1 ).padStart(2, '0') + '.' + String(today.getDate()).padStart(2, '0') + '.' + today.getFullYear();
 
 // mandatory var
 const userInfo = document.getElementById('userInfo');
